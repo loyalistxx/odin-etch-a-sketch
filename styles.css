@@ -6,27 +6,172 @@ body {
     background-color: black;
     color: white;
 }
+/* https://codepen.io/zak/pen/rWJzPy */
+@keyframes rainbow{
+    100%,0%{
+        color: rgb(255,0,0);
+    }
+    8%{
+        color: rgb(255,127,0);
+    }
+    16%{
+        color: rgb(255,255,0);
+    }
+    25%{
+        color: rgb(127,255,0);
+    }
+    33%{
+        color: rgb(0,255,0);
+    }
+    41%{
+        color: rgb(0,255,127);
+    }
+    50%{
+        color: rgb(0,255,255);
+    }
+    58%{
+        color: rgb(0,127,255);
+    }
+    66%{
+        color: rgb(0,0,255);
+    }
+    75%{
+        color: rgb(127,0,255);
+    }
+    83%{
+        color: rgb(255,0,255);
+    }
+    91%{
+        color: rgb(255,0,127);
+    }
+}
+@keyframes rainbowFade{
+    0%{
+        background-color: rgba(255,0,0,1);
+    }
+    8%{
+        background-color: rgb(255,127,0,0.9);
+    }
+    16%{
+        background-color: rgb(255,255,0,0.8);
+    }
+    25%{
+        background-color: rgb(127,255,0,0.7);
+    }
+    33%{
+        background-color: rgb(0,255,0,0.6);
+    }
+    41%{
+        background-color: rgb(0,255,127,0.5);
+    }
+    50%{
+        background-color: rgb(0,255,255,0.4);
+    }
+    58%{
+        background-color: rgb(0,127,255,0.3);
+    }
+    66%{
+        background-color: rgb(0,0,255,0.2);
+    }
+    75%{
+        background-color: rgb(127,0,255,0.1);
+    }
+    83%{
+        background-color: rgb(255,0,255,0);
+    }
+    91%{
+        background-color: rgb(255,0,127,0);
+    }
+    100%{
+        background-color: rgba(255,0,0,0);
+    }
+}
+@keyframes rainbow-bg{
+    100%,0%{
+        background-color: rgb(255,0,0);
+    }
+    8%{
+        background-color: rgb(255,127,0);
+    }
+    16%{
+        background-color: rgb(255,255,0);
+    }
+    25%{
+        background-color: rgb(127,255,0);
+    }
+    33%{
+        background-color: rgb(0,255,0);
+    }
+    41%{
+        background-color: rgb(0,255,127);
+    }
+    50%{
+        background-color: rgb(0,255,255);
+    }
+    58%{
+        background-color: rgb(0,127,255);
+    }
+    66%{
+        background-color: rgb(0,0,255);
+    }
+    75%{
+        background-color: rgb(127,0,255);
+    }
+    83%{
+        background-color: rgb(255,0,255);
+    }
+    91%{
+        background-color: rgb(255,0,127);
+    }
+}
+#btn {
+  animation: rainbow-bg;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+}
+#btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24), 0 17px 50px 0 rgba(255, 255, 255, 0.19);
+  }
+#h1 {
+    animation: rainbow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
 #etch-a-sketch {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #squareWrapper {
-    height: 640px;
-    width: 640px;
+    height: 625px;
+    width: 625px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    align-content: flex-start;
 }
 .square {
     border: solid 1px white;
-    height: 40px;
-    width: 40px;
+    height: 25px;
+    width: 25px;
 }
 .onSquare {
-    background-color: pink;
+    animation: rainbow-bg;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 .outSquare {
-    transition: all, 1s;
+    animation: rainbowFade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
