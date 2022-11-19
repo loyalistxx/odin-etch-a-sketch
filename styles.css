@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+#etch-a-sketch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#squareWrapper {
+    height: 640px;
+    width: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.square {
+    border: solid 1px white;
+    height: 40px;
+    width: 40px;
+}
+.onSquare {
+    background-color: pink;
+}
+.outSquare {
+    transition: all, 1s;
+}
