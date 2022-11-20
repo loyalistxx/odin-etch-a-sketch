@@ -3,7 +3,7 @@
 // that is squared
 // 3- 16 by 16 grid gets removed and a similar function is
 // used to insert the new grid, the number dictated by the prompt
-// 4- the square divs always take 100% / number of divs of the width (Fix the GRID!!)
+// 4- the square divs always take 100% / number of divs of the width (Grid fixed)
 // and height of the wrapper so that the lower the number the bigger the square
 // 5- put a limit on the amount that can be prompted
 // 6- Rainbow animation on mouseenter, and rainbow animation fade on mouse out
@@ -16,9 +16,13 @@ const btn = document.querySelector("#btn");
 let squareAmount = 16;
 let squareSquared = 256;
 function squarePrompt() {
-  squareAmount = prompt("How many squares do you want?");
-  if (isNaN(squareAmount)) {
+  squareAmount = prompt(
+    "How many squares do you want? (WARNING: Higher square amount may lead to some issues)"
+  );
+  if (isNaN(squareAmount) || squareAmount === null) {
     alert("You must enter a Number!");
+  } else if (squareAmount > 100) {
+    alert("Exceeding square limit(over a hundred)");
   } else {
     alert("You choose " + squareAmount + " by " + squareAmount + " squares!");
     squareSquared = squareAmount * squareAmount;
@@ -35,8 +39,10 @@ function addDivs() {
     squareWrapper.appendChild(square);
     square.classList.add("square");
     let heightWidth = 100 / squareAmount;
-    square.setAttribute("min-height", `${heightWidth}%`);
-    square.setAttribute("min-width", `${heightWidth}%`);
+    square.setAttribute(
+      "style",
+      `height: ${heightWidth}%; width: ${heightWidth}%`
+    );
     square.addEventListener("mouseenter", () => {
       square.classList.add("onSquare");
       square.classList.remove("outSquare");
