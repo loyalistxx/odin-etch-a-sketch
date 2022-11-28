@@ -1,25 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin Project - Etch-a-Sketch</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="javascript.js" async></script>
-</head>
-<body>
-    <h1 id="h1">Rainbow Etch-a-Sketch</h1>
-    <button id="btn">Choose how many Squares</button>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="javascript.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="images/paintbrush-solid.svg" />
+  </head>
+  <body>
+    <header>
+      <h1 data-h1 id="h1">Etch-a-Sketch</h1>
+      <div id="tools">
+        <p>Grid Size:</p>
+        <p data-gridSize></p>
+        <input
+          data-squareRange
+          type="range"
+          min="1"
+          max="60"
+          value="16"
+          id="squareRange"
+        />
+        <input data-colorPicker value="#ffffff" id="colorPicker" type="color" />
+        <button data-rainbow id="rainbow" type="button">Rainbow</button>
+        <button data-erase id="erasure" type="button">Erase</button>
+        <button data-clear id="clear" type="button">Clear</button>
+        <button data-toggleBorders id="toggleBorders" type="button">
+          Toggle borders
+        </button>
+      </div>
+    </header>
+    <div id="#headerEnd"></div>
     <article>
-     <div id="etch-a-sketch">
-         <div id="squareWrapper">
-         </div>
-    </div>
+      <div id="etch-a-sketch">
+        <div data-squareWrapper id="squareWrapper"></div>
+      </div>
     </article>
     <footer>
-        <p id="para1">Made by <a href="https://github.com/loyalistxx" target="_blank">loyalist</a> / Adham</p>
-        <p id="para2"><a href="https://github.com/loyalistxx/odin-etch-a-sketch" target="_blank">Source</a> / This project was made for <a href="https://www.theodinproject.com/about">The Odin Project</a></p>
+      <p id="para1">
+        Made by
+        <a href="https://github.com/loyalistxx" target="_blank">loyalist</a> /
+        Adham
+      </p>
+      <p id="para2">
+        <a
+          href="https://github.com/loyalistxx/odin-etch-a-sketch"
+          target="_blank"
+          >SOURCE</a
+        >
+        / This project was made for
+        <a href="https://www.theodinproject.com/about">The Odin Project</a>
+      </p>
     </footer>
-</body>
+  </body>
 </html>

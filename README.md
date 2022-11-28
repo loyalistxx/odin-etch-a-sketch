@@ -2,6 +2,6 @@
 
 an etch-a-sketch project for the odin project
 
-This has been a lot of fun, it was slow in the beginning but it rapidly picked up in pace after i set the plans, which came after i realized what the problems i'm supposed to solve
+This is the true definition of spaghetti code, Or at least this is the most spaghetti code i've done, I Didn't know what i was doing half the time, but it seems to be working
 
-also rainbows are cool
+[Live Demo](https://loyalistxx.github.io/odin-etch-a-sketch/)
